@@ -8,7 +8,7 @@ export const LogoWrapper = styled(Link)`
 
   h1{
     margin-left: 1.2rem;
-    font-size: ${({ theme }) => theme.fontSize.mobile.xs};
+    font-size: ${({ theme }) => theme.fontSize.mobile.xxs};
     font-weight: ${({ theme }) => theme.fontWeight.bold};
     color: ${({ theme }) => theme.colors.text.purple};
     text-transform: uppercase;

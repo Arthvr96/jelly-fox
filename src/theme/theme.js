@@ -26,10 +26,11 @@ export const theme = {
     mobile: {
       xxl: '3.6rem',
       xl: '3rem',
-      l: '2rem',
-      m: '1.8rem',
-      s: '1.6rem',
-      xs: '1.3rem',
+      l: '2.7rem',
+      m: '2rem',
+      s: '1.8rem',
+      xs: '1.6rem',
+      xxs: '1.3rem',
     },
     desktop: {
       xxl: '7.4rem',

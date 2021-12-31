@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from 'layout/layout';
+import HeroSection from 'components/organisms/HeroSection/HeroSection';
 
 const seo = {
   title: 'Jelly Fox',
@@ -8,7 +9,7 @@ const seo = {
 
 const IndexPage = () => (
   <Layout seo={seo}>
-    {/* <p>lorem ipsum dolores asjdfnajsdnfajdsf</p> */}
+    <HeroSection />
   </Layout>
 );
 
