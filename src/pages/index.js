@@ -8,8 +8,7 @@ const seo = {
 
 const IndexPage = () => (
   <Layout seo={seo}>
-    <h2>Siema</h2>
-    <p>Lorem ipsum doloers</p>
+    {/* <p>lorem ipsum dolores asjdfnajsdnfajdsf</p> */}
   </Layout>
 );
 

@@ -1,15 +1,20 @@
+import HeaderBar from 'components/organisms/HeaderBar/HeaderBar';
 import SEO from 'components/templates/SEO/SEO';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'theme/GlobalStyles';
-import { theme } from 'theme/theme';
+import { theme as themeData } from 'theme/theme';
+import { Content } from 'layout/layout.style';
 
 const Layout = ({ children, seo }) => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={themeData}>
     <GlobalStyle />
     <SEO seo={seo} />
-    {children}
+    <Content>
+      <HeaderBar />
+      {children}
+    </Content>
   </ThemeProvider>
 );
 
