@@ -1,14 +1,27 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import hamburger from 'assets/svg/hamburger.svg';
+
+const mixinPseudoEl = css`
+  content: '';
+  display: block;
+  position: absolute;
+  left: -4px;
+  width: 1.3rem;
+  height: 1px;
+  background-color: ${({ theme, scrollVersion }) =>
+    scrollVersion ? theme.colors.bg.black : theme.colors.bg.white};
+`;
 
 export const Button = styled.button`
   position: relative;
   width: 3.3rem;
-  height: 7rem;
+  height: ${({ scrollVersion }) => (scrollVersion ? '3rem' : '7rem')};
   border: none;
   background: transparent;
   cursor: pointer;
-  background: url(${hamburger});
+  background: ${({ scrollVersion }) =>
+    scrollVersion ? 'transparent' : `url(${hamburger})`};
+  transition: height 0.3s ease-in;
 
   div {
     position: absolute;
@@ -17,29 +30,18 @@ export const Button = styled.button`
     transform: translate(-50%, -50%);
     width: 0.9rem;
     height: 1px;
-    background-color: ${({ theme }) => theme.colors.bg.white};
+    background-color: ${({ theme, scrollVersion }) =>
+      scrollVersion ? theme.colors.bg.black : theme.colors.bg.white};
   }
 
   div::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1.3rem;
-    height: 1px;
-    background-color: ${({ theme }) => theme.colors.bg.white};
+    ${mixinPseudoEl};
     top: -4px;
-    left: -4px;
   }
 
   div::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1.3rem;
-    height: 1px;
-    background-color: ${({ theme }) => theme.colors.bg.white};
+    ${mixinPseudoEl};
     top: 4px;
-    left: -4px;
   }
 
   svg {
