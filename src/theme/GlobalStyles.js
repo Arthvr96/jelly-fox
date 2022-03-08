@@ -14,6 +14,8 @@ html{
     text-decoration: none;
 }
 body {
+  width: 100vw;
+  overflow-x: hidden;
   position: relative;
     font-family: ${({ theme }) => theme.fontsNames.paragraphs}, sans-serif;
     font-size: 1.6rem;

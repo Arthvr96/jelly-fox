@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ViewTemplate } from 'components/templates/ViewTemplate/ViewTemplate';
-import ArowScrollDown from 'assets/svg/arowscrolldown.svg';
+import ArowScrollDown from 'assets/svg/arowscrolldown.component.svg';
 
 export const StyledViewTemplate = styled(ViewTemplate)`
   justify-content: center;
@@ -17,7 +17,7 @@ export const Paragraph = styled.p`
   line-height: 4.4rem;
   color: ${({ theme }) => theme.colors.text.purple};
 
-  span{
+  span {
     font-weight: ${({ theme }) => theme.fontWeight.semiBold};
   }
 `;
@@ -32,10 +32,10 @@ export const StyledArrow = styled(ArowScrollDown)`
 `;
 
 export const LanguageSwitchers = styled.div`
-    position: absolute;
-    bottom: 110px;
-    right: 30px;
-    display: flex;
+  position: absolute;
+  bottom: 110px;
+  right: 30px;
+  display: flex;
 `;
 
 export const LanguageButton = styled.button`
@@ -46,10 +46,13 @@ export const LanguageButton = styled.button`
   height: 4.3rem;
   background-color: ${({ theme }) => theme.colors.bg.white};
   border-radius: 100%;
-  border: 1px solid ${({ theme, isSelected }) => (isSelected ? theme.colors.bg.purple : theme.colors.bg.white)};
+  border: 1px solid
+    ${({ theme, isSelected }) =>
+      isSelected ? theme.colors.bg.purple : theme.colors.bg.white};
   font-family: ${({ theme }) => theme.fontsNames.headers};
   font-size: ${({ theme }) => theme.fontSize.mobile.xxs};
-  font-weight: ${({ theme, isSelected }) => (isSelected ? theme.fontWeight.bold : theme.fontWeight.regular)};
+  font-weight: ${({ theme, isSelected }) =>
+    isSelected ? theme.fontWeight.bold : theme.fontWeight.regular};
   color: ${({ theme }) => theme.colors.text.purple};
   padding: 0;
   margin: 0 0 0 1rem;

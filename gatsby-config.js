@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/assets/static/icon.png',
+        icon: 'src/assets/images/icon.png',
       },
     },
     'gatsby-plugin-mdx',
@@ -27,7 +27,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/assets/static/',
+        path: './src/assets/',
       },
       __key: 'images',
     },
@@ -43,7 +43,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/,
+          include: /\.component\.svg$/,
         },
       },
     },

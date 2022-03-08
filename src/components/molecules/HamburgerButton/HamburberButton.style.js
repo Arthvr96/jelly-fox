@@ -1,25 +1,27 @@
 import styled from 'styled-components';
+import hamburger from 'assets/svg/hamburger.svg';
 
 export const Button = styled.button`
-position: relative;
+  position: relative;
   width: 3.3rem;
   height: 7rem;
   border: none;
   background: transparent;
   cursor: pointer;
+  background: url(${hamburger});
 
-  div{
+  div {
     position: absolute;
     top: 50%;
     left: calc(50% + 4px);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 0.9rem;
     height: 1px;
     background-color: ${({ theme }) => theme.colors.bg.white};
   }
 
-  div::before{
-    content:'';
+  div::before {
+    content: '';
     display: block;
     position: absolute;
     width: 1.3rem;
@@ -28,8 +30,9 @@ position: relative;
     top: -4px;
     left: -4px;
   }
-  div::after{
-    content:'';
+
+  div::after {
+    content: '';
     display: block;
     position: absolute;
     width: 1.3rem;
@@ -39,7 +42,7 @@ position: relative;
     left: -4px;
   }
 
-  svg{
+  svg {
     width: 3.3rem;
     height: 7rem;
   }
