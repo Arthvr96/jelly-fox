@@ -2,8 +2,10 @@ import React from 'react';
 import { ViewTemplate } from 'components/templates/ViewTemplate/ViewTemplate';
 import styled from 'styled-components';
 import wavesMobile from 'assets/svg/wavesMobile.svg';
+import { useWindowSize } from '../../../hooks/useWindowSize';
 
 const StyledViewTemplate = styled(ViewTemplate)`
+  transform: ${({ height }) => `translateY(${height}px)`};
   min-height: 300vh;
   background-color: ${({ theme }) => theme.colors.bg.purple};
 `;
@@ -19,9 +21,12 @@ const WavesMobile = styled.div`
   background-size: 100%;
 `;
 
-const ServicesAboutMeSection = () => (
-  <StyledViewTemplate>
-    <WavesMobile />
-  </StyledViewTemplate>
-);
+const ServicesAboutMeSection = () => {
+  const { height } = useWindowSize();
+  return (
+    <StyledViewTemplate height={height}>
+      <WavesMobile />
+    </StyledViewTemplate>
+  );
+};
 export default ServicesAboutMeSection;
