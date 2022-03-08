@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useWindowSize } from 'hooks/useWindowSize';
 import {
   StyledViewTemplate,
@@ -7,11 +7,22 @@ import {
   LanguageSwitchers,
   LanguageButton,
 } from 'components/organisms/HeroSection/HeroSection.style';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 const HeroSection = () => {
-  const { height } = useWindowSize();
+  const heroSectionRef = useRef(null);
+  const { height } = useWindowSize(0);
+
+  useScrollPosition(({ currPos }) => {
+    if (-currPos.y < window.innerHeight) {
+      heroSectionRef.current.style.transform = `translateY(${Math.floor(
+        currPos.y / 4,
+      )}px`;
+    }
+  }, []);
+
   return (
-    <StyledViewTemplate height={height}>
+    <StyledViewTemplate ref={heroSectionRef} height={height}>
       <Paragraph height={height}>
         The picture,
         <span>&nbsp;graphic design, illustration</span>

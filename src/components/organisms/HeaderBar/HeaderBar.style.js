@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   display: flex;
   width: 100vw;
   transform: ${({ isHidden }) =>
-    isHidden ? 'translateY(-100%)' : 'translateY(0)'};
+    isHidden ? 'translateY(-120%)' : 'translateY(0)'};
   justify-content: space-between;
   box-shadow: ${({ scrollVersion }) =>
     scrollVersion
@@ -18,6 +18,5 @@ export const Wrapper = styled.div`
     scrollVersion ? theme.colors.bg.white : 'transparent'};
   padding: ${({ scrollVersion }) =>
     scrollVersion ? '0.7rem 0rem 0.7rem 2rem' : '1rem 0 .5rem 3rem'};
-  transition: box-shadow 0.3s ease-in, padding 0.3s ease-in,
-    transform 0.3s ease-in;
+  transition: padding 0.3s ease-in, transform 0.3s ease-in;
 `;

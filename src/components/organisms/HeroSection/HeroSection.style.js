@@ -3,6 +3,7 @@ import { ViewTemplate } from 'components/templates/ViewTemplate/ViewTemplate';
 import ArowScrollDown from 'assets/svg/arowscrolldown.component.svg';
 
 export const StyledViewTemplate = styled(ViewTemplate)`
+  position: fixed;
   justify-content: center;
   height: ${({ height }) => height}px;
   padding-top: 12.5rem;
