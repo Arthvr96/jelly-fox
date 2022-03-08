@@ -16,8 +16,8 @@ export const LogoWrapper = styled(Link)`
 `;
 
 export const StyledSvgLogo = styled(SvgLogo)`
-  width: ${({ scrollVersion }) => (scrollVersion ? '2.8rem' : '4.2rem')};
-  height: ${({ scrollVersion }) => (scrollVersion ? '3rem' : '4.5rem')};
+  width: ${({ scrollVersion }) => (scrollVersion ? '3.5rem' : '4.2rem')};
+  height: ${({ scrollVersion }) => (scrollVersion ? '3.3rem' : '4.5rem')};
   transition: height 0.3s ease-in, width 0.3s ease-in;
 
   path {

@@ -5,12 +5,14 @@ import ArowScrollDown from 'assets/svg/arowscrolldown.component.svg';
 export const StyledViewTemplate = styled(ViewTemplate)`
   justify-content: center;
   height: ${({ height }) => height}px;
-  padding-top: 10.5rem;
+  padding-top: 12.5rem;
 `;
 
 export const Paragraph = styled.p`
   width: 30rem;
   height: fit-content;
+  margin-top: ${({ height }) => (height - 300) / 2}px;
+  transform: translateY(-50%);
   font-family: ${({ theme }) => theme.fontsNames.headers};
   font-size: ${({ theme }) => theme.fontSize.mobile.l};
   font-weight: ${({ theme }) => theme.fontWeight.regular};

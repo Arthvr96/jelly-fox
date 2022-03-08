@@ -10,12 +10,12 @@ const HeaderBar = () => {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      if (-currPos.y > 50) {
+      if (-currPos.y > 75) {
         setScrollVersion(true);
       } else {
         setScrollVersion(false);
       }
-      if (-currPos.y > 100) {
+      if (-currPos.y > 300) {
         const isShow = currPos.y > prevPos.y;
         if (isShow !== hideOnScroll) setHideOnScroll(isShow);
       }
