@@ -10,8 +10,9 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'airbnb/hooks',
     'airbnb',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['import'],
+  plugins: ['import', 'prettier'],
   settings: {
     'import/resolver': {
       node: {

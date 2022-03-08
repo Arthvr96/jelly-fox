@@ -15,7 +15,7 @@ const WavesMobile = styled.div`
   width: 100vw;
   height: 6.5rem;
   transform: translateY(-100%);
-  background: url(${wavesMobile}) white;
+  background: url(${wavesMobile}) transparent;
   background-size: 100%;
 `;
 

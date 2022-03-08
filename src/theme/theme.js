@@ -12,6 +12,10 @@ export const theme = {
     darkGrey: '',
     bg: {
       white: '#ffffff',
+      black: '#000000',
+      darkGrey: '#282828',
+      grey: '#3b3b3b',
+      lightGrey: '#7d7d7d',
       purple: '#263DCD',
       pink: '#F9B3B7',
       yellow: '#FFAF00',
