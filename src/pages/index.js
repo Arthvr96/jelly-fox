@@ -8,11 +8,13 @@ const seo = {
   description: 'Description',
 };
 
-const IndexPage = () => (
-  <Layout seo={seo}>
-    <HeroSection />
-    <ServicesAboutMeSection />
-  </Layout>
-);
+const IndexPage = () => {
+  return (
+    <Layout seo={seo}>
+      <HeroSection />
+      <ServicesAboutMeSection />
+    </Layout>
+  );
+};
 
 export default IndexPage;
