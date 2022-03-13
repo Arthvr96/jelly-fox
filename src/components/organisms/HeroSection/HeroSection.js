@@ -1,17 +1,17 @@
 import React, { useRef } from 'react';
 import { useWindowSize } from 'hooks/useWindowSize';
 import {
-  StyledViewTemplate,
   Paragraph,
   StyledArrow,
   LanguageSwitchers,
   LanguageButton,
 } from 'components/organisms/HeroSection/HeroSection.style';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import ViewTemplate from 'components/templates/ViewTemplate/ViewTemplate';
 
 const HeroSection = () => {
   const heroSectionRef = useRef(null);
-  const { height } = useWindowSize(0);
+  const { height } = useWindowSize();
 
   useScrollPosition(({ currPos }) => {
     if (-currPos.y < window.innerHeight) {
@@ -22,8 +22,15 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <StyledViewTemplate ref={heroSectionRef} height={height}>
-      <Paragraph height={height}>
+    <ViewTemplate
+      position="fixed"
+      zIndex={-1}
+      justifyContent="center"
+      heightSize={`${height}px`}
+      padding="12.5rem 3rem"
+      refPass={heroSectionRef}
+    >
+      <Paragraph heightSize={height}>
         The picture,
         <span>&nbsp;graphic design, illustration</span>
         <br />
@@ -39,7 +46,7 @@ const HeroSection = () => {
         </LanguageButton>
       </LanguageSwitchers>
       <StyledArrow />
-    </StyledViewTemplate>
+    </ViewTemplate>
   );
 };
 

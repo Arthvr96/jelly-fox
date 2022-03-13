@@ -4,13 +4,6 @@ module.exports = {
     title: 'Jelly Fox',
   },
   plugins: [
-    'gatsby-plugin-root-import',
-    {
-      resolve: 'gatsby-source-datocms',
-      options: {
-        apiToken: 'apitocken',
-      },
-    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
