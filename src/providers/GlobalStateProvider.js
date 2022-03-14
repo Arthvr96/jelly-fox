@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
+import { usePrevious } from '../hooks/usePrevious';
 
 const GlobalStateContext = React.createContext({});
 
@@ -8,14 +9,25 @@ export const useGlobalState = () => {
 };
 
 const GlobalStateProvider = ({ children }) => {
-  const [test, setTest] = useState('siema');
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentRoute, setCurrentRoute] = useState('/home');
+  const prevRoute = usePrevious(currentRoute);
+
+  const handleSetCurrentRoute = (url) => {
+    setCurrentRoute(url);
+  };
+
+  const values = useMemo(() => {
+    return {
+      currentRoute,
+      handleSetCurrentRoute,
+      isOpen,
+      setIsOpen,
+      prevRoute,
+    };
+  }, [currentRoute, isOpen, prevRoute]);
   return (
-    <GlobalStateContext.Provider
-      value={{
-        test,
-        setTest,
-      }}
-    >
+    <GlobalStateContext.Provider value={values}>
       {children}
     </GlobalStateContext.Provider>
   );

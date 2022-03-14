@@ -1,26 +1,24 @@
 import React, { useEffect } from 'react';
 import Layout from 'layout/layout';
-import HeroSection from 'components/organisms/HeroSection/HeroSection';
-import ServicesAboutMeSection from 'components/organisms/ServicesAboutMeSection/ServicesAboutMeSection';
 import { useGlobalState } from '../providers/GlobalStateProvider';
 
 const seo = {
-  title: 'Jelly Fox',
+  title: 'Jelly Fox - projects',
   description: 'Description',
 };
 
-const IndexPage = () => {
+const Projects = () => {
   const { handleSetCurrentRoute } = useGlobalState();
 
   useEffect(() => {
-    handleSetCurrentRoute('/home');
+    handleSetCurrentRoute('/projects');
   }, [handleSetCurrentRoute]);
+
   return (
     <Layout seo={seo}>
-      <HeroSection />
-      <ServicesAboutMeSection />
+      <h2>My Projects</h2>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default Projects;
