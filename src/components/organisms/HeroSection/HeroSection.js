@@ -8,8 +8,13 @@ import {
   LanguageButton,
 } from 'components/organisms/HeroSection/HeroSection.style';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { useGlobalState } from '../../../providers/GlobalStateProvider';
 
 const HeroSection = () => {
+  const { test } = useGlobalState();
+
+  console.log(test);
+
   const heroSectionRef = useRef(null);
   const { height } = useWindowSize(0);
 
