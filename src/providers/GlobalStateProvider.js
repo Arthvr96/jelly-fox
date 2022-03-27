@@ -2,7 +2,13 @@ import React, { useContext, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { usePrevious } from '../hooks/usePrevious';
 
-const GlobalStateContext = React.createContext({});
+const GlobalStateContext = React.createContext({
+  currentRoute: '',
+  handleSetCurrentRoute: () => {},
+  isOpen: false,
+  setIsOpen: () => {},
+  prevRoute: '',
+});
 
 export const useGlobalState = () => {
   return useContext(GlobalStateContext);
