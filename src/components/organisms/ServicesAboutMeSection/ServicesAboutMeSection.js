@@ -44,6 +44,7 @@ const ServicesAboutMeSection = () => {
       <Placeholder heightSize={height} />
       <StyledViewTemplate heightSize={height}>
         <WavesMobile ref={wavesMobileRef} />
+        <p>siema</p>
       </StyledViewTemplate>
     </>
   );
