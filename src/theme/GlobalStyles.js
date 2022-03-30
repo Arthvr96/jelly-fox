@@ -50,7 +50,6 @@ export const GlobalStyle = createGlobalStyle`
 
   abbr[title] {
     border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
     text-decoration: underline dotted; /* 2 */
   }
 
