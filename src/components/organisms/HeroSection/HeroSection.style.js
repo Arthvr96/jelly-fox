@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ViewTemplate } from 'components/templates/ViewTemplate/ViewTemplate';
-import ArowScrollDown from 'assets/svg/arowscrolldown.component.svg';
+import ArrowScrollDown from 'assets/svg/arowscrolldown.component.svg';
 
 export const StyledViewTemplate = styled(ViewTemplate)`
   position: fixed;
@@ -25,7 +25,7 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const StyledArrow = styled(ArowScrollDown)`
+export const StyledArrow = styled(ArrowScrollDown)`
   position: absolute;
   bottom: 75px;
   left: 50%;
